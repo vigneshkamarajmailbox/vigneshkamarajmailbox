@@ -1,0 +1,31 @@
+logging.file.name=appusage.log
+
+# spring.redis.cluster.nodes=localhost:6379
+spring.redis.lettuce.pool.max-active=10
+spring.redis.lettuce.pool.max-idle=8
+spring.redis.lettuce.pool.max-wait=-1ms
+spring.redis.lettuce.pool.min-idle=0
+spring.redis.timeout=50000
+
+
+
+
+#Scheduler Properties for Stock Approval
+cron.auto.stock.approval.enable=false
+cron.auto.stock.approval=0 0 9 */2 * *
+#Scheduler Properties for Current Day Stock Approval
+cron.auto.currentday.stock.approval.enable=false
+cron.auto.currentday.stock.approval=0 0 0/2 * * *
+
+# INTEGRATION
+integration.limit=100
+#Enable Email Option and mail Properties
+spring.mail.host=smtp.qlc.co.in
+spring.mail.port=25
+spring.mail.username=xxx
+spring.mail.password=xxx
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.enable=false
+email.otp.enable=true
+email.subject=One Time Password
